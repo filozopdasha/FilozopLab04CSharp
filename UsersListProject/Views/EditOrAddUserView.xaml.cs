@@ -3,11 +3,11 @@
 namespace FilozopLab04.UsersListProject.Views
 {
     /// <summary>
-    /// Interaction logic for EnterPersonView.xaml
+    /// Interaction logic for EditOrAddUserView.xaml
     /// </summary>
-    public partial class EnterPersonView : UserControl
+    public partial class EditOrAddUserView : UserControl
     {
-        public EnterPersonView()
+        public EditOrAddUserView()
         {
             InitializeComponent();
         }

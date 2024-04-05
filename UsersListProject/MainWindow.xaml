@@ -9,7 +9,7 @@
         Title="PersonList" Height="700" Width="800">
     <Window.Resources>
         <DataTemplate DataType="{ x:Type viewModels:EditOrAddUserViewModel}">
-            <views:EnterPersonView></views:EnterPersonView>
+            <views:EditOrAddUserView></views:EditOrAddUserView>
         </DataTemplate>
         <DataTemplate DataType="{ x:Type viewModels:UsersListViewModel}">
             <views:UsersListView></views:UsersListView>

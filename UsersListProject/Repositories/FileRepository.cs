@@ -44,9 +44,17 @@ namespace FilozopLab04.UsersListProject.Repositories
                     string firstName = names[nameIndex];
                     string lastName = surnames[surnameIndex];
 
-                    _ = AddOrUpdate(new DBUser(Guid.NewGuid(), firstName, lastName, $"{firstName}.{lastName}@example.com",
-                        new DateTime(ran.Next(1890, 2023), ran.Next(1, 13), ran.Next(1, 29))));
+                    DBUser newUser = new DBUser(
+                        Guid.NewGuid(),
+                        firstName,
+                        lastName,
+                        $"{firstName}.{lastName}@example.com",
+                        new DateTime(ran.Next(1890, 2023), ran.Next(1, 13), ran.Next(1, 29))
+                    );
+
+                    AddOrUpdate(newUser);
                 }
+
             }
         }
 

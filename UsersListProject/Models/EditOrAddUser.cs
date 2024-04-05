@@ -26,31 +26,58 @@ namespace FilozopLab04.UsersListProject.Models
 
         public Guid Guid
         {
-            get { return _guid; }
+            get
+            {
+                return _guid; 
+            }
         }
 
         public string FirstName
         {
-            get { return _firstName; }
-            set { _firstName = value; }
+            get 
+            {
+                return _firstName; 
+            }
+            set 
+            {
+                _firstName = value; 
+            }
         }
 
         public string LastName
         {
-            get { return _lastName; }
-            set { _lastName = value; }
+            get 
+            {
+                return _lastName; 
+            }
+            set
+            {
+                _lastName = value;
+            }
         }
 
         public string Email
         {
-            get { return _email; }
-            set { _email = value; }
+            get
+            {
+                return _email; 
+            }
+            set 
+            {
+                _email = value;
+            }
         }
 
         public DateTime? DateOfBirth
         {
-            get { return _dateOfBirth; }
-            set { _dateOfBirth = value; }
+            get 
+            {
+                return _dateOfBirth; 
+            }
+            set
+            {
+                _dateOfBirth = value; 
+            }
         }
     }
 }

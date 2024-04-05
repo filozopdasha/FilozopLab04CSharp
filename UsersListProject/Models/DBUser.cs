@@ -15,16 +15,24 @@ namespace FilozopLab04.UsersListProject.Models
         public DBUser(Guid guid, string firstName, string lastName, string email, DateTime dateOfBirth)
         {
             if (!Regex.IsMatch(email, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))
+            {
                 throw new WrongEmailException(email);
+            }
 
             int age = DateTime.Today.Year - dateOfBirth.Year;
             if (DateTime.Today < dateOfBirth.AddYears(age))
+            {
                 --age;
+            }
 
             if (age < 0)
+            {
                 throw new DateIsInFutureException(dateOfBirth.ToString("dd.MM.yyyy"));
+            }
             if (age > 135)
+            {
                 throw new DateIsTooOldException(dateOfBirth.ToString("dd.MM.yyyy"));
+            }
 
             _guid = guid;
             _firstName = firstName;
@@ -35,27 +43,42 @@ namespace FilozopLab04.UsersListProject.Models
 
         public Guid Guid
         {
-            get { return _guid; }
+            get 
+            {
+                return _guid; 
+            }
         }
 
         public string FirstName
         {
-            get { return _firstName; }
+            get 
+            {
+                return _firstName; 
+            }
         }
 
         public string LastName
         {
-            get { return _lastName; }
+            get 
+            {
+                return _lastName; 
+            }
         }
 
         public string Email
         {
-            get { return _email; }
+            get 
+            {
+                return _email; 
+            }
         }
 
         public DateTime DateOfBirth
         {
-            get { return _dateOfBirth; }
+            get 
+            {
+                return _dateOfBirth;
+            }
         }
     }
 }
